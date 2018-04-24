@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+import os
+from update_tool_python.check_for_updates import check_for_updates_main
+from update_tool_python.common.updatemodule import getlink
+
+DIR = getlink(__file__)
+if DIR == '/usr/local':
+        DATADIR = os.path.join(DIR, 'share', 'update_tool_python', 'data')
+else:
+        DATADIR = os.path.join(DIR,'update_tool_python', 'common', 'data')
+
+if __name__ == "__main__":
+	check_for_updates_main.main(DATADIR)
