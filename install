@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]; then
+	echo "Please run as root"
+	exit 1
+fi
+
+chmod +x "check-for-updates" "setup.py" "updater"
+chmod 666 "update_tool_python/common/data/updates.txt" "update_tool_python/common/data/zeroUpdates.txt"
+./setup.py install --record "./install-record.txt"
+rm -r "./build"
