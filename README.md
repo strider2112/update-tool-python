@@ -14,11 +14,17 @@ The Solution's Problem's Solution: So I created two scripts. The update-checker,
 Dependancies:
 
 Apt - built into ubuntu. Canonical installation package
+
 Python3 - Python3 is required for the apt-check script as well as this script. (sudo apt install python)
+
 update-notifier - update-notifier is required because it contains the apt-check script. (sudo apt install update-notifier)
 
 Installation:
-run the command "sudo ./install" from the clone directory, the script should take care of the rest. If it doesn't, take a look in the "install" script (it is a shell script).
+
+1. Make the file "install" executable by doing 'chmod +x install'
+
+2. run the command "sudo ./install" from the clone directory, the script should take care of the rest. If it doesn't, take a look in the "install" script (it is a shell script).
 
 Uninstallation:
-The script "install" will create a text file named install-record.txt, this file contains all the items that were installed. Run "sudo ./uninstall" to automatically remove all these items.
+1. Make the file "uninstall" executable by doing 'chmod +x uninstall'
+2. The script "install" will create a text file named install-record.txt, this file contains all the items that were installed. Run "sudo ./uninstall" to automatically remove all these items.
