@@ -12,17 +12,12 @@ The Solution's Problem: This makes a problem where, if you see that you have upd
 The Solution's Problem's Solution: So I created two scripts. The update-checker, and a custom update-helper - all the update-helper does is assist in the process of going through aptitude to update the out of date packages. However, to assist in user-usability, it makes calls back to the update-checker so that there are no gaps left in the system.
 
 Dependancies:
-
-Apt - built into ubuntu. Canonical installation package
-
-Python3 - Python3 is required for the apt-check script as well as this script. (sudo apt install python)
-
-update-notifier - update-notifier is required because it contains the apt-check script. (sudo apt install update-notifier)
+1. Apt - built into ubuntu. Canonical installation package
+2. Python3 - Python3 is required for the apt-check script as well as this script. (sudo apt install python)
+3. update-notifier - update-notifier is required because it contains the apt-check script. (sudo apt install update-notifier)
 
 Installation:
-
 1. Make the file "install" executable by doing 'chmod +x install'
-
 2. run the command "sudo ./install" from the clone directory, the script should take care of the rest. If it doesn't, take a look in the "install" script (it is a shell script).
 
 Uninstallation:
